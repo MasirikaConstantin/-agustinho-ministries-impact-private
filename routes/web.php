@@ -27,9 +27,11 @@ Route::get("/vision", function () {
 Route::get("/support", function () {
     return Inertia::render('Support');
 })->name('support');
+
 Route::get("/gallery", function () {
-    return Inertia::render('gallery/page');
+    return Inertia::render('gallery');
 })->name('gallery');
+
 Route::get("/services", function () {
     return Inertia::render('Services');
 })->name('services');
