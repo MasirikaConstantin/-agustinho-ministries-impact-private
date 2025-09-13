@@ -4,6 +4,7 @@ import { Users, Target, Lightbulb, ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@inertiajs/react";
+import ClientLayout from "@/layouts/ClientLayout";
 
 const About = () => {
   const values = [
@@ -25,8 +26,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ClientLayout>
       
       <section className="py-20 bg-gradient-secondary mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -209,8 +209,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
+    </ClientLayout>
   );
 };
 

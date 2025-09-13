@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import SponsorsCarousel from "@/components/SponsorsCarousel";
 import { Carousel } from "@/components/carousel";
 import { Head } from "@inertiajs/react";
+import ClientLayout from "@/layouts/ClientLayout";
 
 const Index = () => {
 
@@ -40,16 +41,8 @@ const carouselItems = [
 ]
 
   return (
-    <div className="min-h-screen bg-background">
-      <Head>
-        <title>Fondation Agustinho Meschak M.</title>
-        <meta name="description" content="Fondation Agustinho Meschak M." />
-        <meta name="keywords" content="Fondation Agustinho Meschak M." />
-        <meta name="author" content="Fondation Agustinho Meschak M." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-      </Head>
-      <Header />
+    <ClientLayout>
+     
       <Carousel items={carouselItems} autoPlay={true} interval={6000} />
 
       <Hero />
@@ -59,7 +52,7 @@ const carouselItems = [
       {/* <Achievements /> */}
       <Vision />
       <Contact />
-    </div>
+    </ClientLayout>
   );
 };
 

@@ -17,6 +17,8 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "@inertiajs/react";
+import { home } from "@/routes";
+import ClientLayout from "@/layouts/ClientLayout";
 
 const Services = () => {
   const services = [
@@ -86,15 +88,14 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ClientLayout>
       
       <section className="py-20 bg-background mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <div className="mb-8">
-              <Link href="/" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+              <Link href={home()} className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Retour à l'accueil
               </Link>
@@ -245,8 +246,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
+    </ClientLayout>
   );
 };
 

@@ -14,7 +14,8 @@ import {
   CheckCircle
 } from "lucide-react";
 import { Link } from "@inertiajs/react";
-import Header from "@/components/Header";
+import ClientLayout from "@/layouts/ClientLayout";
+import { contact, home } from "@/routes";
 
 const Support = () => {
   const supportTypes = [
@@ -94,15 +95,14 @@ const Support = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ClientLayout>
       
       <section className="py-20 bg-gradient-secondary mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <div className="mb-8">
-              <Link href="/" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+              <Link href={home()} className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Retour à l'accueil
               </Link>
@@ -360,7 +360,7 @@ const Support = () => {
                     <Heart className="mr-2 h-5 w-5" />
                     Faire un don maintenant
                   </Button>
-                  <Link href="/contact">
+                  <Link href={contact()}>
                     <Button variant="outline" size="lg">
                       Nous contacter
                     </Button>
@@ -371,7 +371,7 @@ const Support = () => {
           </div>
         </div>
       </section>
-    </div>
+    </ClientLayout>
   );
 };
 

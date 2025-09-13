@@ -14,10 +14,12 @@ import {
 import { Link } from "@inertiajs/react";
 import Header from "@/components/Header";
 import Contact from "@/components/Contact";
+import ClientLayout from "@/layouts/ClientLayout";
+import { home } from "@/routes";
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <ClientLayout>
       <Header />
       
       <section className="py-20 bg-gradient-secondary mt-16">
@@ -25,7 +27,7 @@ const ContactPage = () => {
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <div className="mb-8">
-              <Link href="/" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+              <Link href={home()} className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Retour à l'accueil
               </Link>
@@ -49,7 +51,7 @@ const ContactPage = () => {
       <div className="py-0">
         <Contact />
       </div>
-    </div>
+    </ClientLayout>
   );
 };
 

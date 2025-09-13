@@ -49,8 +49,8 @@
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-content antialiased">
         @inertia
-    </body>        <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
+    </body>        
 
 </html>

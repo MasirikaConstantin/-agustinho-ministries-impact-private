@@ -14,17 +14,19 @@ import {
 import { Link } from "@inertiajs/react";
 import Header from "@/components/Header";
 import Achievements from "@/components/Achievements";
+import ClientLayout from "@/layouts/ClientLayout";
+import { home } from "@/routes";
 
 const AchievementsPage = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <ClientLayout>
       <Header />
       
       <section className="py-20 bg-gradient-secondary mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="mb-8">
-              <Link href="/" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+              <Link href={home()} className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Retour à l'accueil
               </Link>
@@ -39,7 +41,7 @@ const AchievementsPage = () => {
       </section>
       
      
-    </div>
+    </ClientLayout>
   );
 };
 

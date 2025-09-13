@@ -187,7 +187,6 @@ const Achievements = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </section>
   );
 };

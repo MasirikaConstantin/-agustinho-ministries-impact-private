@@ -14,6 +14,8 @@ import {
 import { Link } from "@inertiajs/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ClientLayout from "@/layouts/ClientLayout";
+import { contact, home, support } from "@/routes";
 
 const Sponsors = () => {
   const sponsorCategories = [
@@ -164,15 +166,14 @@ const Sponsors = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ClientLayout>
       
       <section className="py-20 bg-gradient-secondary mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Breadcrumb */}
             <div className="mb-8">
-              <Link href="/" className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
+              <Link href={home()} className="inline-flex items-center text-primary hover:text-primary/80 transition-colors">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Retour à l'accueil
               </Link>
@@ -305,12 +306,12 @@ const Sponsors = () => {
                   à la transformation sociale. Ensemble, construisons un avenir durable.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/support">
+                  <Link href={support()}>
                     <Button variant="hero" size="lg">
                       Devenir partenaire
                     </Button>
                   </Link>
-                  <Link href="/contact">
+                  <Link href={contact()}>
                     <Button variant="outline" size="lg">
                       Nous contacter
                     </Button>
@@ -321,8 +322,7 @@ const Sponsors = () => {
           </div>
         </div>
       </section>
-      <Footer />
-    </div>
+    </ClientLayout>
   );
 };
 
