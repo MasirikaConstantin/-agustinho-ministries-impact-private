@@ -1,11 +1,5 @@
-"use client"
-
-import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { Card, CardContent } from "@/components/ui/card"
 
 export interface GalleryItem {
   id: number
@@ -50,7 +44,7 @@ export default function Gallery({ items, columns = 4 }: GalleryProps) {
   }
 
   // Gestion des touches du clavier
-  React.useEffect(() => {
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return
       
@@ -79,9 +73,9 @@ export default function Gallery({ items, columns = 4 }: GalleryProps) {
     <>
       <div className={`grid ${gridClasses} gap-4`}>
         {items.map((item, index) => (
-          <Card 
+          <div 
             key={item.id} 
-            className="overflow-hidden cursor-pointer group"
+            className="bg-card rounded-lg overflow-hidden cursor-pointer group border border-border"
             onClick={() => openModal(item, index)}
           >
             <div className="aspect-square overflow-hidden">
@@ -91,45 +85,40 @@ export default function Gallery({ items, columns = 4 }: GalleryProps) {
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-            <CardContent className="p-4">
+            <div className="p-4">
               <h3 className="font-semibold text-lg mb-1 line-clamp-1">{item.title}</h3>
               <p className="text-sm text-muted-foreground line-clamp-2">{item.description}</p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
 
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-4xl w-full p-0 overflow-hidden">
-          {selectedItem && (
+      {/* Modal */}
+      {isOpen && selectedItem && (
+        <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-card rounded-lg max-w-4xl w-full max-h-[90vh] overflow-hidden border border-border">
             <div className="relative">
               {/* Bouton fermer */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-4 right-4 z-50 bg-background/80 backdrop-blur-sm rounded-full"
+              <button
                 onClick={closeModal}
+                className="absolute top-4 right-4 z-50 bg-background/80 backdrop-blur-sm rounded-full p-2 hover:bg-accent"
               >
                 <X className="h-5 w-5" />
-              </Button>
+              </button>
 
               {/* Navigation */}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-background/80 backdrop-blur-sm rounded-full"
+              <button
                 onClick={goToPrevious}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-background/80 backdrop-blur-sm rounded-full p-2 hover:bg-accent"
               >
                 <ChevronLeft className="h-6 w-6" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-background/80 backdrop-blur-sm rounded-full"
+              </button>
+              <button
                 onClick={goToNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-background/80 backdrop-blur-sm rounded-full p-2 hover:bg-accent"
               >
                 <ChevronRight className="h-6 w-6" />
-              </Button>
+              </button>
 
               {/* Contenu du modal */}
               <div className="flex flex-col md:flex-row">
@@ -169,9 +158,9 @@ export default function Gallery({ items, columns = 4 }: GalleryProps) {
                 </div>
               </div>
             </div>
-          )}
-        </DialogContent>
-      </Dialog>
+          </div>
+        </div>
+      )}
     </>
   )
 }

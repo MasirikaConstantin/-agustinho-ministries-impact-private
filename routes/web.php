@@ -29,7 +29,7 @@ Route::get("/support", function () {
 })->name('support');
 
 Route::get("/gallery", function () {
-    return Inertia::render('gallery');
+    return Inertia::render('Gallery');
 })->name('gallery');
 
 Route::get("/services", function () {
