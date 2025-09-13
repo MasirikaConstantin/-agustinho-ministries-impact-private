@@ -39,12 +39,29 @@
         <meta property="og:image" content="{{ asset('logo/logo-background.ico') }}">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
-        <meta property="og:image:alt" content="Logo d'Our Project">
+        <meta property="og:image:alt" content="Fondation Agustinho Meschak M. MINISTRIES">
         <meta name="twitter:image" content="{{ asset('logo/logo-background.ico') }}">
-        <meta name="twitter:image:alt" content="Logo d'Our Project">
+        <meta name="description" content="La Fondation Agustinho Meschak M. MINISTRIES est une organisation à but non lucratif engagée dans le développement humain, la promotion de l'éducation, l'amélioration de la santé et l'action philanthropique." />
+
+        <meta name="twitter:image:alt" content="Fondation Agustinho Meschak M. MINISTRIES">
 
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=comfortaa:400" rel="stylesheet" />
+
+        <style>
+            @import url(https://fonts.bunny.net/css?family=abel:400|comfortaa:400);
+            @font-face {
+                font-family: 'Abel', sans-serif;
+              
+           }
+
+           body {
+            font-family: 'Comfortaa', display !important;
+
+           
+           }
+       </style>
+       
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         @inertiaHead

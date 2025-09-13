@@ -8,7 +8,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <ClientTamplate>
              <Head>
                 <title>Fondation Agustinho Meschak M.</title>
-                <meta name="description" content="Fondation Agustinho Meschak M." />
+                <meta name="description" content="La Fondation Agustinho Meschak M. MINISTRIES est une organisation à but non lucratif engagée dans le développement humain, la promotion de l'éducation, l'amélioration de la santé et l'action philanthropique." />
                 <meta name="keywords" content="Fondation Agustinho Meschak M." />
                 <meta name="author" content="Fondation Agustinho Meschak M." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />

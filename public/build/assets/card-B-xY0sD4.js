@@ -1,0 +1,6 @@
+import{c as o,a as s}from"./button-Cxrfpgrj.js";import{r as t,j as d}from"./app-BosRyCZW.js";/**
+ * @license lucide-react v0.475.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const c=[["path",{d:"m12 19-7-7 7-7",key:"1l729n"}],["path",{d:"M19 12H5",key:"x3x0zl"}]],N=o("ArrowLeft",c),n=t.forwardRef(({className:a,...e},r)=>d.jsx("div",{ref:r,className:s("rounded-lg border bg-card text-card-foreground shadow-sm",a),...e}));n.displayName="Card";const i=t.forwardRef(({className:a,...e},r)=>d.jsx("div",{ref:r,className:s("flex flex-col space-y-1.5 p-6",a),...e}));i.displayName="CardHeader";const l=t.forwardRef(({className:a,...e},r)=>d.jsx("h3",{ref:r,className:s("text-2xl font-semibold leading-none tracking-tight",a),...e}));l.displayName="CardTitle";const m=t.forwardRef(({className:a,...e},r)=>d.jsx("p",{ref:r,className:s("text-sm text-muted-foreground",a),...e}));m.displayName="CardDescription";const f=t.forwardRef(({className:a,...e},r)=>d.jsx("div",{ref:r,className:s("p-6 pt-0",a),...e}));f.displayName="CardContent";const p=t.forwardRef(({className:a,...e},r)=>d.jsx("div",{ref:r,className:s("flex items-center p-6 pt-0",a),...e}));p.displayName="CardFooter";export{N as A,n as C,f as a};
