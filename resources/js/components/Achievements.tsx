@@ -10,7 +10,6 @@ import {
   CheckCircle,
   ArrowRight
 } from "lucide-react";
-import Footer from "./Footer";
 
 const Achievements = () => {
   const achievements = [
