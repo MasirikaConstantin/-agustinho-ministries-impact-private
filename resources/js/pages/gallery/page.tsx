@@ -1,6 +1,5 @@
-import Footer from "@/components/Footer"
 import Gallery from "@/components/gallery"
-import Header from "@/components/Header"
+import ClientLayout from "@/layouts/ClientLayout"
 
 const galleryItems = [
   {
@@ -71,8 +70,7 @@ const galleryItems = [
 
 export default function GalleryPage() {
   return (
-    <div className="min-h-screen bg-background">
-    <Header />
+    <ClientLayout>
     <div className="py-20 bg-gradient-secondary mt-16 px-4 sm:px-6 lg:px-8">
       
 
@@ -86,7 +84,6 @@ export default function GalleryPage() {
       <Gallery items={galleryItems} columns={4} />
       
     </div>
-    <Footer />
-    </div>
+    </ClientLayout>
   )
 }
