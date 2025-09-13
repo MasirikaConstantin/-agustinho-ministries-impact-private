@@ -1,0 +1,30 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { MonitorCog } from "lucide-react";
+const NotFound = () => {
+
+  return (
+    <div>
+      <Header />
+    <div className="flex min-h-screen items-center justify-center bg-gradient-secondary">
+      <div className="text-center">
+        <h1 className="mb-4 text-8xl font-bold text-red-500">404</h1>
+        <p className="mb-4 text-xl dark:text-gray-100 text-gray-500 ">Oops! Page non trouvée</p>
+        <a href="/" className="text-blue-500 underline hover:text-blue-700 dark:text-blue-400">
+          Revenir à la page d'accueil
+        </a>
+
+        <blockquote className="mt-6 border-l-2 pl-6 italic">
+          une erreur est survenue veuillez contacter le support
+    </blockquote>
+
+      </div>
+    <MonitorCog className="h-12 w-12 text-primary" />
+
+    </div>
+    <Footer />
+    </div>
+  );
+};
+
+export default NotFound;
