@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { Link } from "@inertiajs/react";
+import { about, achievements, contact, gallery, home, services, sponsors, vision } from "@/routes";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,14 +10,14 @@ const Header = () => {
   const [isThemeDropdownOpen, setIsThemeDropdownOpen] = useState(false);
 
   const navigation = [
-    { name: "Accueil", href: "/" },
-    { name: "À propos", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Réalisations", href: "/achievements" },
-    { name: "Vision", href: "/vision" },
-    { name: "Galerie", href: "/gallery" },
-    { name: "Sponsors", href: "/sponsors" },
-    { name: "Contact", href: "/contact" },
+    { name: "Accueil", href: home(), textHref: home().url },
+    { name: "À propos", href: about(), textHref: about().url },
+    { name: "Services", href: services(), textHref: services().url },
+    { name: "Réalisations", href: achievements(), textHref: achievements().url },
+    { name: "Vision", href: vision(), textHref: vision().url },
+    { name: "Galerie", href: gallery(), textHref: gallery().url },
+    { name: "Sponsors", href: sponsors(), textHref: sponsors().url },
+    { name: "Contact", href: contact(), textHref: contact().url },
   ];
 
   // Initialiser le thème au chargement du composant
@@ -26,7 +27,7 @@ const Header = () => {
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
 
-
+console.log(location.pathname);
 
   // Fermer le menu mobile quand la route change
   useEffect(() => {
@@ -83,7 +84,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`transition-smooth font-medium ${location.pathname === item.href ? "text-primary font-semibold" : "text-foreground hover:text-primary"}`}
+                  className={`transition-smooth font-medium ${location.pathname === item.textHref ? "text-primary font-semibold" : "text-foreground hover:text-primary"}`}
                 >
                   {item.name}
                 </Link>
@@ -113,7 +114,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-2 transition-smooth font-medium ${location.pathname === item.href ? "text-primary font-semibold bg-primary/10 rounded-md" : "text-foreground hover:text-primary"}`}
+                  className={`block px-3 py-2 transition-smooth font-medium ${location.pathname === item.textHref ? "text-primary font-semibold bg-primary/10 rounded-md" : "text-foreground hover:text-primary"}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
