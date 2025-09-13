@@ -82,7 +82,7 @@ const Header = () => {
               {navigation.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  href={item.textHref}
                   className={`transition-smooth font-medium ${url === item.textHref ? "text-primary font-semibold" : "text-foreground hover:text-primary"}`}
                 >
                   {item.name}
@@ -112,7 +112,7 @@ const Header = () => {
               {navigation.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  href={item.textHref}
                   className={`block px-3 py-2 transition-smooth font-medium ${url === item.textHref ? "text-primary font-semibold bg-primary/10 rounded-md" : "text-foreground hover:text-primary"}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
