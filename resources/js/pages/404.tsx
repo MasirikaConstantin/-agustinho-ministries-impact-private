@@ -3,11 +3,11 @@ import Footer from "@/components/Footer";
 import { MonitorCog } from "lucide-react";
 import { home } from "@/routes";
 import { Link } from "@inertiajs/react";
+import ClientLayout from "@/layouts/ClientLayout";
 const NotFound = () => {
 
   return (
-    <div>
-      <Header />
+    <ClientLayout>
     <div className="flex min-h-screen items-center justify-center bg-gradient-secondary">
       <div className="text-center">
         <h1 className="mb-4 text-8xl font-bold text-red-500">404</h1>
@@ -24,8 +24,7 @@ const NotFound = () => {
     <MonitorCog className="h-12 w-12 text-primary" />
 
     </div>
-    <Footer />
-    </div>
+    </ClientLayout>
   );
 };
 

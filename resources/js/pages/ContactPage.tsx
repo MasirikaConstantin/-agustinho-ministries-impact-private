@@ -12,7 +12,6 @@ import {
   ArrowLeft
 } from "lucide-react";
 import { Link } from "@inertiajs/react";
-import Header from "@/components/Header";
 import Contact from "@/components/Contact";
 import ClientLayout from "@/layouts/ClientLayout";
 import { home } from "@/routes";
@@ -20,7 +19,6 @@ import { home } from "@/routes";
 const ContactPage = () => {
   return (
     <ClientLayout>
-      <Header />
       
       <section className="py-20 bg-gradient-secondary mt-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,8 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Eye, Target, Heart, Globe, ArrowLeft } from "lucide-react";
-import Header from "@/components/Header";
 import Vision from "@/components/Vision";
-import Footer from "@/components/Footer";
 import { Link } from "@inertiajs/react";
 import ClientLayout from "@/layouts/ClientLayout";
 import { home } from "@/routes";

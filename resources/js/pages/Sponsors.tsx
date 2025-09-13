@@ -12,8 +12,6 @@ import {
   CheckCircle
 } from "lucide-react";
 import { Link } from "@inertiajs/react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ClientLayout from "@/layouts/ClientLayout";
 import { contact, home, support } from "@/routes";
 

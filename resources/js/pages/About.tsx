@@ -1,8 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Target, Lightbulb, ArrowLeft } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Link } from "@inertiajs/react";
 import ClientLayout from "@/layouts/ClientLayout";
 

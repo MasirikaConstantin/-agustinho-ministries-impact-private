@@ -14,8 +14,6 @@ import {
   HandCoins,
   HandHeart
 } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Link } from "@inertiajs/react";
 import { home } from "@/routes";
 import ClientLayout from "@/layouts/ClientLayout";
