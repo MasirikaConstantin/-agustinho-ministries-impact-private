@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { Link } from "@inertiajs/react";
+import { Link, usePage } from "@inertiajs/react";
 import { about, achievements, contact, gallery, home, services, sponsors, vision } from "@/routes";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,8 +26,7 @@ const Header = () => {
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
-
-console.log(location.pathname);
+  const { url } = usePage();
 
   // Fermer le menu mobile quand la route change
   useEffect(() => {
@@ -35,7 +34,7 @@ console.log(location.pathname);
     
     // Remonter en haut de page à chaque changement de route
     window.scrollTo(0, 0);
-  }, [location]);
+  }, [url]);
 
   // Gestion du défilement pour un effet de header rétréci
   useEffect(() => {
@@ -84,7 +83,7 @@ console.log(location.pathname);
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`transition-smooth font-medium ${location.pathname === item.textHref ? "text-primary font-semibold" : "text-foreground hover:text-primary"}`}
+                  className={`transition-smooth font-medium ${url === item.textHref ? "text-primary font-semibold" : "text-foreground hover:text-primary"}`}
                 >
                   {item.name}
                 </Link>
@@ -114,7 +113,7 @@ console.log(location.pathname);
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-2 transition-smooth font-medium ${location.pathname === item.textHref ? "text-primary font-semibold bg-primary/10 rounded-md" : "text-foreground hover:text-primary"}`}
+                  className={`block px-3 py-2 transition-smooth font-medium ${url === item.textHref ? "text-primary font-semibold bg-primary/10 rounded-md" : "text-foreground hover:text-primary"}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
