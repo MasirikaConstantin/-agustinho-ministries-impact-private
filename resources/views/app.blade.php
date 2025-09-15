@@ -68,6 +68,7 @@
     </head>
     <body class="font-content antialiased">
         @inertia
+
     </body>        
 
 </html>

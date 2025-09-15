@@ -4,16 +4,16 @@ import ClientLayout from "@/layouts/ClientLayout"
 const galleryItems = [
   {
     id: 1,
-    src: "/logo-foundation.jpeg",
-    title: "Cérémonie d'ouverture 2023",
-    description: "La cérémonie d'ouverture de nos programmes annuels avec tous nos partenaires et bénéficiaires.",
-    category: "Événements",
-    date: "15 Janvier 2023"
+    src: "/storage/ecole/14.jpeg",
+    title: "Construction d'un centre hospitalier et d'une école",
+    description: "La Fondation Agustinho Meschack construit des centres hospitaliers et des écoles pour offrir des soins de santé et de l'éducation de qualité aux populations défavorisées des pays en développement.",
+    category: "Projets",
+    date: "15 Janvier 2025"
   },
   {
     id: 2,
-    src: "/logo/logo-background.ico",
-    title: "Projet communautaire",
+    src: "/storage/ecole/1.jpeg",
+    title: "Construction d'un centre hospitalier et d'une école",
     description: "Travail avec la communauté locale pour construire des infrastructures durables.",
     category: "Projets",
     date: "22 Mars 2023"

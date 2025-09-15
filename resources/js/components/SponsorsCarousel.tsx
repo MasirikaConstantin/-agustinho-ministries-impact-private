@@ -16,7 +16,7 @@ const SponsorsCarousel = () => {
   useEffect(() => {
     // Simulation de chargement de données
     const fakeSponsors : Sponsor[] = [
-      { id: 1, name: "Sponsor 1", logo: "/logo/logo-foundation.jpeg", url: "#", description: "Description du sponsor 1" },
+      { id: 1, name: "Sponsor 1", logo: "/storage/ecole/1.jpeg", url: "#", description: "Description du sponsor 1" },
       { id: 2, name: "Sponsor 2", logo: "/logo/logo-background.ico", url: "#", description: "Description du sponsor 2" },
       { id: 3, name: "Sponsor 3", logo: "/logo/logo.ico", url: "#", description: "Description du sponsor 3" },
       { id: 4, name: "Sponsor 4", logo: "/logo/logo-foundation.jpeg", url: "#", description: "Description du sponsor 4" },

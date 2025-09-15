@@ -41,5 +41,12 @@ Route::fallback(function () {
 Route::get("/sponsors", function () {
     return Inertia::render('Sponsors');
 })->name('sponsors');
+
+Route::get("/gallery/ecole", function () {
+    return Inertia::render('activite1/GalleryPage');
+})->name('ecole');
+Route::get("/gallery/hopital", function () {
+    return Inertia::render('activite1/GalleryPage');
+})->name('hopital');
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';

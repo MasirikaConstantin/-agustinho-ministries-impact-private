@@ -8,6 +8,7 @@ import SponsorsCarousel from "@/components/SponsorsCarousel";
 import { Carousel } from "@/components/carousel";
 import { Head } from "@inertiajs/react";
 import ClientLayout from "@/layouts/ClientLayout";
+import HomePage from "./activite1/HomePage";
 
 const Index = () => {
 
@@ -17,7 +18,7 @@ const carouselItems = [
     id: 1,
     title: "Bienvenue à la Fondation Agustinho Meschak M.",
     description: "Découvrez notre mission et nos actions pour construire un avenir meilleur.",
-    image: "/logo-foundation.jpeg",
+    image: "/storage/ecole/14.jpeg",
     ctaText: "En savoir plus",
     ctaLink: "/about"
   },
@@ -25,7 +26,7 @@ const carouselItems = [
     id: 2,
     title: "Soutenez notre cause",
     description: "Votre don fait la différence dans la vie de nombreuses personnes.",
-    image: "/logo/logo-background.ico",
+    image: "/storage/ecole/21.jpeg",
     ctaText: "Faire un don",
     ctaLink: "/donate"
   },
@@ -48,6 +49,7 @@ const carouselItems = [
       <About />
       {/* <Services /> */}
       <SponsorsCarousel />
+      <HomePage />
       {/* <Achievements /> */}
       <Vision />
       <Contact />
